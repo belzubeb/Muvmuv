@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnBoard2">
+
+    <ImageView
+        android:id="@+id/onboard1"
+        android:layout_width="338dp"
+        android:layout_height="346dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:src="@drawable/onboard2" />
+
+    <TextView
+        android:id="@+id/txtdisc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onboard1"
+        android:layout_centerHorizontal="true"
+        android:text="Discover"
+        android:textSize="36sp"
+        android:textColor="@color/Black"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/txtcinematic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtdisc"
+        android:layout_centerHorizontal="true"
+        android:text="Tailored Films"
+        android:textSize="36sp"
+        android:textColor="@color/Black"/>
+    <TextView
+        android:id="@+id/desconboard1"
+        android:layout_width="350dp"
+        android:layout_height="36dp"
+        android:layout_below="@id/txtcinematic"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="15dp"
+        android:text="Explore curated recommendations tailored to your unique tastes and preferences."
+        android:gravity="center"
+        android:textColor="@color/Black"/>
+    <ImageView
+        android:id="@+id/navbarboard1"
+        android:layout_width="35dp"
+        android:layout_height="9dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/navbaronboard2"
+        android:layout_below="@id/desconboard1"
+        android:layout_marginTop="44dp"/>
+    <Button
+        android:id="@+id/backonboard1"
+        android:layout_width="66dp"
+        android:layout_height="34dp"
+        android:background="@drawable/button_putih"
+        android:layout_below="@id/navbarboard1"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:text="Back"
+        android:textColor="@color/Tangerine"
+        android:onClick="onBacktButtonClick"/>
+    <Button
+        android:id="@+id/btnnextboard3"
+        android:layout_width="261dp"
+        android:layout_height="34dp"
+        android:background="@drawable/button_oren"
+        android:text="@string/next_please"
+        android:textColor="@color/Primary"
+        android:layout_below="@id/navbarboard1"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="112dp"
+        android:onClick="onNextButtonClick"/>
+
+</RelativeLayout>

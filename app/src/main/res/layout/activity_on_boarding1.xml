@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnBoarding1">
+
+    <ImageView
+        android:id="@+id/onboard1"
+        android:layout_width="319.86dp"
+        android:layout_height="318.03dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:src="@drawable/onboard1"
+        android:rotation="28.09"/>
+
+    <TextView
+        android:id="@+id/txtlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onboard1"
+        android:layout_centerHorizontal="true"
+        android:text="Log Your"
+        android:textSize="36sp"
+        android:textColor="@color/Black"
+        android:layout_marginTop="29.39dp"/>
+    <TextView
+        android:id="@+id/txtcinematic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtlog"
+        android:layout_centerHorizontal="true"
+        android:text="Cinematic Journey"
+        android:textSize="36sp"
+        android:textColor="@color/Black"/>
+    <TextView
+        android:id="@+id/desconboard1"
+        android:layout_width="350dp"
+        android:layout_height="36dp"
+        android:layout_below="@id/txtcinematic"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:text="Easily log the films you've watched, from beloved classics to indie gems."
+        android:gravity="center"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/Black"/>
+    <ImageView
+        android:id="@+id/navbarboard1"
+        android:layout_width="35dp"
+        android:layout_height="9dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/navboard1"
+        android:layout_below="@id/desconboard1"
+        android:layout_marginTop="44dp"
+        />
+    <Button
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:background="@drawable/button_oren"
+        android:text="Next Please!"
+        android:textColor="@color/Primary"
+        android:layout_below="@id/navbarboard1"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:onClick="onNextButtonClick"/>
+
+</RelativeLayout>

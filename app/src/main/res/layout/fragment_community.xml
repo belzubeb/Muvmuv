@@ -19,10 +19,10 @@
 
     <ImageView
         android:id="@+id/logoCommunity"
-        android:layout_width="127.05dp"
-        android:layout_height="23dp"
+        android:layout_width="137dp"
+        android:layout_height="24.81dp"
         android:layout_below="@id/greatingCommunity"
-        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/muvmuvlogo" />
 

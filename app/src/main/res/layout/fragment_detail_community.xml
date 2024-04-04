@@ -10,6 +10,38 @@
         android:layout_height="154dp"
         android:id="@+id/CommunityHeader"
         android:src="@drawable/communityheader"/>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/backarrow"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/txtmost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CommunityHeader"
+        android:text="Most Recent"
+        android:layout_marginStart="57.5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/Black"/>
+    <TextView
+        android:id="@+id/communityplaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CommunityHeader"
+        android:text="Community Playlist"
+        android:layout_marginStart="226.5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/Black"/>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtmost"
+        android:layout_marginTop="13dp"/>
 
 
 
