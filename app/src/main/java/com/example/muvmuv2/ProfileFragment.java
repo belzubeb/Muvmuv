@@ -7,13 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,6 +24,9 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private View rootView;
+    private View txtActivity;
+    private View txtCommunity;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -59,6 +63,42 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        TextView txtreview = rootView.findViewById(R.id.txtreview);
+        TextView txtplaylist = rootView.findViewById(R.id.txtplaylist);
+        TextView txtwatchlist = rootView.findViewById(R.id.txtwatclist);
+        TextView txtdiary = rootView.findViewById(R.id.txtdiary);
+
+
+        txtreview.setOnClickListener(this);
+        txtplaylist.setOnClickListener(this);
+        txtwatchlist.setOnClickListener(this);
+        txtdiary.setOnClickListener(this);
+
+        return rootView;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.txtreview) {
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.FragmentProfile, new ActivityFragmentChild())
+                    .commit();
+            if (v.getId() == R.id.txtplaylist) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.FragmentProfile, new ActivityFragmentChild())
+                        .commit();
+                if (v.getId() == R.id.txtwatclist) {
+                    getParentFragmentManager().beginTransaction()
+                            .replace(R.id.FragmentProfile, new ActivityFragmentChild())
+                            .commit();
+                } else if (v.getId() == R.id.txtdiary) {
+                    getParentFragmentManager().beginTransaction()
+                            .replace(R.id.FragmentProfile, new CommunityFragmentChild())
+                            .commit();
+                }
+            }
+        }
     }
 }

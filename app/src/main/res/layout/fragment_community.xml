@@ -67,7 +67,8 @@
         android:textColor="@color/Black"
         android:layout_marginTop="28dp"
         android:textSize="14sp"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:contextClickable="true"/>
 
     <TextView
         android:id="@+id/txtCommunity"
@@ -79,7 +80,8 @@
         android:textColor="@color/Black"
         android:layout_marginTop="28dp"
         android:textSize="14sp"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:contextClickable="true"/>
 
     <FrameLayout
         android:id="@+id/fragment_container"

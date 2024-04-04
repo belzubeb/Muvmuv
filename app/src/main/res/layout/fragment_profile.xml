@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="147dp"
         android:src="@drawable/headerprofile1"/>
+
     <ImageView
         android:id="@+id/fotoprofile"
         android:layout_width="85dp"
@@ -21,7 +22,9 @@
         android:layout_width="89dp"
         android:layout_height="34dp"
         android:layout_below="@+id/headerprofile"
-        android:layout_marginStart="269dp"/>
+        android:layout_marginStart="269dp"
+        android:text="Settings"
+        android:textSize="10sp"/>
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
@@ -32,13 +35,106 @@
         android:layout_marginStart="35dp"
         android:textColor="@color/Black"/>
     <TextView
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="belzubeb"
+        android:text="@string/lebahganteng"
         android:layout_below="@id/username"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="35dp"/>
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:text="Stop calling me out, we're never going to"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:textColor="@color/Black"/>
+    <LinearLayout
+        android:id="@+id/folls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/bio">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/Tangerine"
+            android:text="666"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="35dp"
+            android:textColor="@color/Tangerine"
+            android:text="100"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Followers"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="1dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/menuprofile"
+        android:layout_below="@id/folls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/txtreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Review"
+            android:textSize="14sp"
+            android:fontFamily="@font/semibold"
+            android:clickable="true"/>
+        <TextView
+            android:id="@+id/txtplaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Playlist"
+            android:layout_marginStart="20.33dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/semibold"
+            android:clickable="true"/>
+        <TextView
+            android:id="@+id/txtwatclist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Wathclist"
+            android:layout_marginStart="20.33dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/semibold"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/txtdiary"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20.33dp"
+            android:fontFamily="@font/semibold"
+            android:text="My Diary"
+            android:textSize="14sp"
+            android:clickable="true"/>
 
 
-
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/FragmentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menuprofile"
+        android:layout_marginTop="26dp"/>
 </RelativeLayout>
