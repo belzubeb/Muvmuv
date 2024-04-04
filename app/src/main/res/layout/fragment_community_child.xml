@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityFragmentChild">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/communitylists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Community Lists"
+                android:textSize="14sp"
+                android:textColor="@color/Black"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/communitylists"
+                android:text="Whether you're a cinephile, a fan of a specific genre, or simply looking to share your thoughts on the latest releases, Community Groups provide the perfect platform for engaging discussions, sharing recommendations, and organizing movie-related events."
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:justificationMode="inter_word"
+                android:textColor="@color/Black"/>
+
+            <TextView
+                android:id="@+id/newestcommunity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Newest Community"
+                android:layout_marginTop="23dp"
+                android:textSize="14sp"
+                android:textColor="@color/Black"
+                android:layout_marginStart="20dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="20dp"/>
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="8dp"/>
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="20dp"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:id="@+id/popularcommunity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Community"
+                android:textSize="14sp"
+                android:textColor="@color/Black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="20dp"/>
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="8dp"/>
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="20dp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:id="@+id/recent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Community based your recent watchlist"
+                android:textSize="14sp"
+                android:textColor="@color/Black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="20dp"/>
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="8dp"/>
+                    <ImageView
+                        android:layout_width="209dp"
+                        android:layout_height="129dp"
+                        android:src="@drawable/communitycard"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="20dp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

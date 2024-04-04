@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Primary"
+    tools:context=".CommunityFragment">
+
+    <TextView
+        android:id="@+id/greatingCommunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Good Morning, Ucuyy👋"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        />
+
+    <ImageView
+        android:id="@+id/logoCommunity"
+        android:layout_width="127.05dp"
+        android:layout_height="23dp"
+        android:layout_below="@id/greatingCommunity"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/muvmuvlogo" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/greatingCommunity"
+        android:layout_marginStart="306dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="57dp"
+        android:src="@drawable/contoh_pp_foreground" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/greatingCommunity"
+        android:layout_marginStart="342dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/contoh_alert_foreground" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoCommunity"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle"
+        android:hint="Find Film, reviews, lists, user.."
+        android:imeOptions="actionSearch"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/txtActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginStart="74dp"
+        android:textColor="@color/Black"
+        android:layout_marginTop="28dp"
+        android:textSize="14sp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txtCommunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Community"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginStart="253dp"
+        android:textColor="@color/Black"
+        android:layout_marginTop="28dp"
+        android:textSize="14sp"
+        android:clickable="true"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtActivity"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+</RelativeLayout>

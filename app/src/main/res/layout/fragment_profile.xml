@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <ImageButton
+        android:id="@+id/headerprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="147dp"
+        android:src="@drawable/headerprofile1"/>
+    <ImageView
+        android:id="@+id/fotoprofile"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="104dp"
+        android:src="@drawable/fotoprofile"/>
+    <Button
+        android:layout_width="89dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/headerprofile"
+        android:layout_marginStart="269dp"/>
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jihyo love akhdan"
+        android:layout_below="@id/fotoprofile"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:textColor="@color/Black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="belzubeb"
+        android:layout_below="@id/username"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"/>
+
+
+
+</RelativeLayout>
