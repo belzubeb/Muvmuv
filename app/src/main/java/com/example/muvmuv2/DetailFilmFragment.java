@@ -3,6 +3,8 @@ package com.example.muvmuv2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,7 +68,23 @@ public class DetailFilmFragment extends Fragment {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                requireActivity().getSupportFragmentManager().popBackStack();
+                // Mendapatkan fragment manager dari activity yang memuat fragment ini
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+
+                // Membuat instance fragment home
+                Fragment homeFragment = new HomeFragment();
+
+                // Mulai transaksi fragment
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                // Gantikan fragment yang ada di container dengan fragment home
+                transaction.replace(R.id.fragment_container, homeFragment);
+
+                // Menambahkan transaksi ke back stack
+                transaction.addToBackStack(null);
+
+                // Melakukan transaksi
+                transaction.commit();
             }
         });
         return view;

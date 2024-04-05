@@ -33,7 +33,7 @@
         android:layout_marginStart="306dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="57dp"
-        android:src="@drawable/contoh_pp_foreground" />
+        android:src="@drawable/avatar" />
 
     <ImageView
         android:layout_width="30dp"
@@ -41,7 +41,7 @@
         android:layout_below="@id/greatingCommunity"
         android:layout_marginStart="342dp"
         android:layout_marginTop="1dp"
-        android:src="@drawable/contoh_alert_foreground" />
+        android:src="@drawable/notif" />
 
     <EditText
         android:id="@+id/searchEditText"
@@ -89,8 +89,5 @@
         android:layout_height="match_parent"
         android:layout_below="@id/txtActivity"
         android:layout_marginTop="20dp"/>
-
-
-
 
 </RelativeLayout>

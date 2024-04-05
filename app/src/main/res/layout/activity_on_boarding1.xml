@@ -11,7 +11,7 @@
         android:layout_width="319.86dp"
         android:layout_height="318.03dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="125.58dp"
         android:src="@drawable/onboard1"
         android:rotation="28.09"/>
 

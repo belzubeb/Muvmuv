@@ -16,9 +16,9 @@
 
     <LinearLayout
         android:id="@+id/welcomeBack"
-        android:layout_width="227dp"
         android:layout_below="@id/logologin"
-        android:layout_height="98dp"
+        android:layout_width="175dp"
+        android:layout_height="105dp"
         android:layout_marginTop="192dp"
         android:orientation="vertical"
         android:layout_marginStart="20dp">

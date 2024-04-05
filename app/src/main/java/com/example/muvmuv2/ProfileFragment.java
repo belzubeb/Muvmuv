@@ -83,22 +83,21 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if (v.getId() == R.id.txtreview) {
             getParentFragmentManager().beginTransaction()
-                    .replace(R.id.FragmentProfile, new ActivityFragmentChild())
+                    .replace(R.id.FragmentProfile, new FragmentReview())
                     .commit();
-            if (v.getId() == R.id.txtplaylist) {
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.FragmentProfile, new ActivityFragmentChild())
-                        .commit();
-                if (v.getId() == R.id.txtwatclist) {
+        }else if (v.getId() == R.id.txtplaylist) {
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.FragmentProfile, new PlayistFragment())
+                    .commit();
+        }else if (v.getId() == R.id.txtwatclist) {
                     getParentFragmentManager().beginTransaction()
-                            .replace(R.id.FragmentProfile, new ActivityFragmentChild())
+                            .replace(R.id.FragmentProfile, new WatchlistFragment())
                             .commit();
                 } else if (v.getId() == R.id.txtdiary) {
                     getParentFragmentManager().beginTransaction()
-                            .replace(R.id.FragmentProfile, new CommunityFragmentChild())
+                            .replace(R.id.FragmentProfile, new DiaryFragment())
                             .commit();
                 }
             }
         }
-    }
-}
+

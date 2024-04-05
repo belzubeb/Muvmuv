@@ -71,19 +71,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 DetailFilmFragment detailFragment = new DetailFilmFragment();
-
                 // Mendapatkan fragment manager dari parent
                 FragmentManager fragmentManager = getParentFragmentManager();
-
                 // Mulai transaksi fragment
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-
                 // Gantikan fragment yang ada di fragment_container dengan fragment baru
                 transaction.replace(R.id.fragment_container, detailFragment);
-
                 // Tambahkan transaksi ke back stack (opsional)
                 transaction.addToBackStack(null);
-
                 // Lakukan transaksi
                 transaction.commit();
             }

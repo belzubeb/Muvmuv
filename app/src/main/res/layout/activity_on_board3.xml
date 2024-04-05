@@ -44,11 +44,11 @@
         android:gravity="center"
         android:textColor="@color/Black"/>
     <ImageView
-        android:id="@+id/navbarboard1"
+        android:id="@+id/navbarboard3"
         android:layout_width="35dp"
         android:layout_height="9dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/navbaronboard2"
+        android:src="@drawable/navbarboard3"
         android:layout_below="@id/desconboard1"
         android:layout_marginTop="44dp"/>
     <Button
@@ -56,7 +56,7 @@
         android:layout_width="66dp"
         android:layout_height="34dp"
         android:background="@drawable/button_putih"
-        android:layout_below="@id/navbarboard1"
+        android:layout_below="@id/navbarboard3"
         android:layout_marginTop="40dp"
         android:layout_marginStart="20dp"
         android:text="Back"
@@ -70,7 +70,7 @@
         android:background="@drawable/button_oren"
         android:text="@string/next_please"
         android:textColor="@color/Primary"
-        android:layout_below="@id/navbarboard1"
+        android:layout_below="@id/navbarboard3"
         android:layout_marginTop="40dp"
         android:layout_marginStart="112dp"
         android:onClick="onLogin"/>
