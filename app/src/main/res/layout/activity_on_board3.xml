@@ -61,7 +61,7 @@
         android:layout_marginStart="20dp"
         android:text="Back"
         android:textColor="@color/Tangerine"
-
+        android:onClick="onbackboard2"
         />
     <Button
         android:id="@+id/btnnextlogin"
