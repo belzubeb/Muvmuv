@@ -18,4 +18,9 @@ public class OnBoard3 extends AppCompatActivity {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
+
+    public void onbackboard2(View view) {
+        Intent intent = new Intent(this, OnBoard2.class);
+        startActivity(intent);
+    }
 }

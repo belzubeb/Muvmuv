@@ -204,7 +204,7 @@
                 android:textColor="@color/Black"
                 android:layout_marginStart="20dp"/>
             <HorizontalScrollView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
                 android:scrollbars="none">
@@ -218,41 +218,34 @@
                         android:layout_width="98dp"
                         android:layout_height="147dp"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/wonka"
-                        android:clickable="true"/>
+                        android:src="@drawable/wonka" />
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="98dp"
                         android:layout_height="147dp"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/wonka"
-                        android:clickable="true"/>
+                        android:src="@drawable/wonka" />
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="98dp"
                         android:layout_height="147dp"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/wonka"
-                        android:clickable="true"/>
+                        android:src="@drawable/wonka" />
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="98dp"
                         android:layout_height="147dp"
                         android:layout_marginStart="5dp"
-                        android:src="@drawable/wonka"
-                        android:clickable="true"/>
+                        android:src="@drawable/wonka" />
                     <ImageView
                         android:id="@+id/imageView7"
                         android:layout_width="98dp"
                         android:layout_height="147dp"
                         android:layout_marginStart="5dp"
                         android:src="@drawable/wonka"
-                        android:clickable="true"
                         android:layout_marginEnd="20dp"/>
                 </LinearLayout>
-
             </HorizontalScrollView>
-
         </LinearLayout>
     </ScrollView>
 
