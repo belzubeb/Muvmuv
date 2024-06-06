@@ -11,6 +11,7 @@
         android:id="@+id/CommunityHeader"
         android:src="@drawable/communityheader"/>
     <ImageView
+        android:id="@+id/backArow"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/backarrow"

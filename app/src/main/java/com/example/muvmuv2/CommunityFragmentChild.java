@@ -3,6 +3,7 @@ package com.example.muvmuv2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -60,21 +61,24 @@ public class CommunityFragmentChild extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_community_child, container, false);
-        ImageView imageView = rootView.findViewById(R.id.communitycard1);
+        View view = inflater.inflate(R.layout.fragment_community_child, container, false);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        // Temukan ImageView
+        ImageView communityCard1 = view.findViewById(R.id.communitycard1);
+
+        // Set onClickListener pada ImageView
+        communityCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new DetailCommunityFragment();
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                // Ganti fragment ke DetailCommunityFragment
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new DetailCommunityFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
-        return rootView;
-    }
 
+        return view;
+    }
 }

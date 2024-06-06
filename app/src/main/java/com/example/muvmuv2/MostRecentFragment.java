@@ -7,14 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DetailCommunityFragment#newInstance} factory method to
+ * Use the {@link MostRecentFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DetailCommunityFragment extends Fragment {
+public class MostRecentFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +24,7 @@ public class DetailCommunityFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DetailCommunityFragment() {
+    public MostRecentFragment() {
         // Required empty public constructor
     }
 
@@ -35,11 +34,11 @@ public class DetailCommunityFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DetailCommunityFragment.
+     * @return A new instance of fragment MostRecentFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DetailCommunityFragment newInstance(String param1, String param2) {
-        DetailCommunityFragment fragment = new DetailCommunityFragment();
+    public static MostRecentFragment newInstance(String param1, String param2) {
+        MostRecentFragment fragment = new MostRecentFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -48,18 +47,18 @@ public class DetailCommunityFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_detail_community, container, false);
-
-        ImageView backArrow = view.findViewById(R.id.backArow);
-        backArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getParentFragmentManager().popBackStack();
-            }
-        });
-
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_most_recent, container, false);
     }
 }
