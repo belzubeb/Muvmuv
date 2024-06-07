@@ -59,13 +59,19 @@
             android:text="Username or Email"
             android:textColor="@color/Black" />
 
-        <EditText
-            android:id="@+id/valueEmail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="@drawable/rectanglelogin"
-            android:hint="Your email"
-            android:textSize="14sp"/>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/valueEmail"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/rectanglelogin"
+                android:hint="Your email"
+                android:textSize="14sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/password"
@@ -76,13 +82,21 @@
             android:text="Password"
             android:textColor="@color/Black" />
 
-        <EditText
-            android:id="@+id/Valuepassword"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="@drawable/rectanglelogin"
-            android:hint="Your Password"
-            android:textSize="14sp" />
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/Valuepassword"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/rectanglelogin"
+                android:hint="Your Password"
+                android:textSize="14sp"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 

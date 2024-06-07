@@ -83,6 +83,187 @@
                 android:layout_below="@id/descmost1"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="12dp"/>
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B6B6B6"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/symbolchatmost1"/>
+
+            <ImageView
+                android:id="@+id/avamost2"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:src="@drawable/avacopycat"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/divider1"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/usermost2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="copycat"
+                android:layout_toEndOf="@id/avamost2"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/semibold"
+                android:layout_below="@id/divider1"
+                android:textColor="@color/Black"
+                android:layout_marginStart="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailmost2"
+                android:text="@string/lebahganteng"
+                android:layout_toEndOf="@id/usermost2"
+                android:layout_below="@id/divider1"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hours2"
+                android:text="2h"
+                android:layout_toEndOf="@id/emailmost2"
+                android:layout_below="@id/divider1"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descmost2"
+                android:text="film emma stonee yang selain lalaland itu yang bagus apa aja si gaiss? hehehehe ku pemula bangett!!!"
+                android:layout_below="@id/usermost2"
+                android:layout_toEndOf="@id/avamost2"
+                android:justificationMode="inter_word"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/Black"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:id="@+id/symbolchatmost2"
+                android:src="@drawable/comment"
+                android:layout_below="@id/descmost2"
+                android:layout_toEndOf="@id/avamost2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="11dp"/>
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:src="@drawable/thumbsup"
+                android:layout_toEndOf="@id/symbolchatmost2"
+                android:layout_below="@id/descmost2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="12dp"/>
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B6B6B6"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/symbolchatmost2"/>
+
+            <ImageView
+                android:id="@+id/avamost3"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:src="@drawable/avacopycat"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/divider2"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/usermost3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="copycat"
+                android:layout_toEndOf="@id/avamost3"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/semibold"
+                android:layout_below="@id/divider2"
+                android:textColor="@color/Black"
+                android:layout_marginStart="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailmost3"
+                android:text="@string/lebahganteng"
+                android:layout_toEndOf="@id/usermost3"
+                android:layout_below="@id/divider2"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hours3"
+                android:text="2h"
+                android:layout_toEndOf="@id/emailmost3"
+                android:layout_below="@id/divider2"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/descmost3"
+                android:text="film emma stonee yang selain lalaland itu yang bagus apa aja si gaiss? hehehehe ku pemula bangett!!!"
+                android:layout_below="@id/usermost3"
+                android:layout_toEndOf="@id/avamost3"
+                android:justificationMode="inter_word"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="9dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/Black"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:id="@+id/symbolchatmost3"
+                android:src="@drawable/comment"
+                android:layout_below="@id/descmost3"
+                android:layout_toEndOf="@id/avamost3"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="11dp"/>
+
+            <ImageView
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:src="@drawable/thumbsup"
+                android:layout_toEndOf="@id/symbolchatmost3"
+                android:layout_below="@id/descmost3"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="12dp"/>
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B6B6B6"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/symbolchatmost3"/>
 
         </RelativeLayout>
 

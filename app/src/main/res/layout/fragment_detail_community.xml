@@ -27,7 +27,8 @@
         android:layout_marginStart="57.5dp"
         android:layout_marginTop="10dp"
         android:textSize="14sp"
-        android:textColor="@color/Black"/>
+        android:textColor="@color/Black"
+        android:clickable="true"/>
     <TextView
         android:id="@+id/communityplaylist"
         android:layout_width="wrap_content"

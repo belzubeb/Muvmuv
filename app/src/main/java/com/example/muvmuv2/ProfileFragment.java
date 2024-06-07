@@ -1,5 +1,6 @@
 package com.example.muvmuv2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -69,12 +71,14 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         TextView txtplaylist = rootView.findViewById(R.id.txtplaylist);
         TextView txtwatchlist = rootView.findViewById(R.id.txtwatclist);
         TextView txtdiary = rootView.findViewById(R.id.txtdiary);
+        Button btnSetting = rootView.findViewById(R.id.btnSetting);
 
 
         txtreview.setOnClickListener(this);
         txtplaylist.setOnClickListener(this);
         txtwatchlist.setOnClickListener(this);
         txtdiary.setOnClickListener(this);
+        btnSetting.setOnClickListener(this);
 
         return rootView;
     }
@@ -99,5 +103,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                             .commit();
                 }
             }
-        }
+
+    public void onSettings(View view) {
+        Intent intent = new Intent(getContext(), Settings.class);
+        startActivity(intent);
+    }
+}
 

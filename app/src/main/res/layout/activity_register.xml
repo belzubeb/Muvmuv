@@ -65,13 +65,19 @@
             android:text="Username"
             android:textColor="@color/Black" />
 
-        <EditText
-            android:id="@+id/valueuser"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="@drawable/rectanglelogin"
-            android:hint="Your coolest name"
-            android:textSize="14sp"/>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/valueuser"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/rectanglelogin"
+                android:hint="Your coolest name"
+                android:textSize="14sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/email"
@@ -82,13 +88,20 @@
             android:text="Email"
             android:textColor="@color/Black" />
 
-        <EditText
-            android:id="@+id/valueEmail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="@drawable/rectanglelogin"
-            android:hint="example@com"
-            android:textSize="14sp" />
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/valueEmail"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/rectanglelogin"
+                android:hint="example@com"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
             android:id="@+id/password"
             android:layout_width="wrap_content"
@@ -96,15 +109,24 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="3dp"
             android:text="Password"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"/>
 
-        <EditText
-            android:id="@+id/Valuepassword"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="@drawable/rectanglelogin"
-            android:hint="must be 8 character or more"
-            android:textSize="14sp" />
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/Valuepassword"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/rectanglelogin"
+                android:hint="must be 8 character or more"
+                android:textSize="14sp"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
             android:id="@+id/passwordcheck"
             android:layout_width="wrap_content"
@@ -112,15 +134,23 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="3dp"
             android:text="Confirm Password"
-            android:textColor="@color/Black" />
+            android:textColor="@color/Black"/>
 
-        <EditText
-            android:id="@+id/Valuepasswordcheck"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="@drawable/rectanglelogin"
-            android:hint="repeat password"
-            android:textSize="14sp" />
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/Valuepasswordcheck"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/rectanglelogin"
+                android:hint="repeat password"
+                android:textSize="14sp"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 

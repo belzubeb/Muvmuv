@@ -19,12 +19,15 @@
         android:layout_marginTop="104dp"
         android:src="@drawable/fotoprofile"/>
     <Button
+        android:id="@+id/btnSetting"
         android:layout_width="89dp"
         android:layout_height="34dp"
         android:layout_below="@+id/headerprofile"
         android:layout_marginStart="269dp"
         android:text="Settings"
-        android:textSize="10sp"/>
+        android:textSize="10sp"
+        android:clickable="true"
+        android:onClick="onSettings"/>
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
