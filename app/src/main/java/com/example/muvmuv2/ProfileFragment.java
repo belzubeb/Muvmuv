@@ -101,12 +101,12 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                     getParentFragmentManager().beginTransaction()
                             .replace(R.id.FragmentProfile, new DiaryFragment())
                             .commit();
-                }
-            }
+                } else if (v.getId()== R.id.btnSetting) {
+            Intent intent = new Intent(getContext(), Settings.class);
+            startActivity(intent);
 
-    public void onSettings(View view) {
-        Intent intent = new Intent(getContext(), Settings.class);
-        startActivity(intent);
+        }
     }
+
 }
 

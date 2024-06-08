@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PageFollow">
+    
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backarrow"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lebahganteng"
+        android:fontFamily="@font/bold"
+        android:layout_marginTop="9dp"
+        android:textColor="@color/Black"
+        android:layout_toEndOf="@id/back"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/Following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following"
+        android:layout_below="@+id/id"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="69dp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/Black"/>
+
+    <TextView
+        android:id="@+id/Followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Followers"
+        android:layout_below="@+id/id"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="260.5dp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/Black"/>
+
+    <FrameLayout
+        android:id="@+id/FragmentFolls"
+        android:layout_marginTop="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Followers"/>
+
+</RelativeLayout>

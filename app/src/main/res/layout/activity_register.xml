@@ -80,7 +80,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/email"
+            android:id="@+id/txtemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/valueEmail"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:background="@drawable/rectanglelogin"
@@ -103,7 +103,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/password"
+            android:id="@+id/txtpassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -117,7 +117,7 @@
             app:passwordToggleEnabled="true">
 
             <EditText
-                android:id="@+id/Valuepassword"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:background="@drawable/rectanglelogin"
@@ -149,10 +149,21 @@
                 android:hint="repeat password"
                 android:textSize="14sp"
                 android:inputType="textPassword"/>
-
         </com.google.android.material.textfield.TextInputLayout>
-
     </LinearLayout>
+
+    <Button
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:id="@+id/buttonRegister"
+        android:layout_centerHorizontal="true"
+        android:text="REGISTER NOW"
+        android:drawableEnd="@drawable/rectangle"
+        android:textColor="@color/Primary"
+        android:layout_below="@id/ValueLogin"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_oren"
+        android:onClick="onLogin"/>
 
     <Button
         android:layout_width="353dp"
@@ -162,8 +173,8 @@
         android:text="Login"
         android:drawableEnd="@drawable/rectangle"
         android:textColor="@color/Primary"
-        android:layout_below="@id/ValueLogin"
-        android:layout_marginTop="20dp"
+        android:layout_below="@id/buttonRegister"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_oren"
         android:onClick="onLogin"/>
 
