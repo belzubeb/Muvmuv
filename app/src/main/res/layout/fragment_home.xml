@@ -11,10 +11,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="Good Morning, Ucuyy👋"
+        android:layout_marginTop="10dp"
+        android:text="Hello "
+        android:layout_below="@+id/logo"
         android:textColor="@android:color/black"
         android:textSize="13sp" />
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textView"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/Black"
+        android:text="..."
+        />
 
     <ImageView
         android:id="@+id/imageView"
@@ -27,15 +39,14 @@
         android:id="@+id/logo"
         android:layout_width="137dp"
         android:layout_height="24.81dp"
-        android:layout_below="@id/textView"
-        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/muvmuvlogo" />
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_below="@id/textView"
+        android:layout_below="@id/logo"
         android:layout_marginStart="306dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="57dp"
@@ -44,7 +55,7 @@
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_below="@id/textView"
+        android:layout_below="@id/logo"
         android:layout_marginStart="342dp"
         android:layout_marginTop="1dp"
         android:src="@drawable/notif" />
@@ -53,7 +64,7 @@
         android:id="@+id/searchEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
+        android:layout_below="@id/textView"
         android:layout_marginTop="10dp"
         android:background="@drawable/rectangle"
         android:hint="Find Film, reviews, lists, user.."

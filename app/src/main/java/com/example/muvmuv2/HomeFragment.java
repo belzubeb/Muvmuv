@@ -10,6 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +26,8 @@ public class HomeFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private TextView textUsername;
+    private FirebaseUser firebaseUser;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -62,6 +68,15 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+
+        textUsername = rootView.findViewById(R.id.username);
+        firebaseUser =FirebaseAuth.getInstance().getCurrentUser();
+
+        if (firebaseUser != null) {
+            textUsername.setText(firebaseUser.getDisplayName());
+        }else{
+            textUsername.setText("Login Gagal");
+        }
 
         // Mengakses ImageView di sini
         ImageView imageView = rootView.findViewById(R.id.imageView2);

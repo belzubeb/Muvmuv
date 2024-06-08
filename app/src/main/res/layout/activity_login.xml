@@ -130,6 +130,7 @@
         android:layout_marginTop="25dp"
         />
     <TextView
+        android:id="@+id/txtregistlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
