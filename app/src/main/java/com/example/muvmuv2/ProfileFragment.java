@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -72,6 +73,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         TextView txtwatchlist = rootView.findViewById(R.id.txtwatclist);
         TextView txtdiary = rootView.findViewById(R.id.txtdiary);
         Button btnSetting = rootView.findViewById(R.id.btnSetting);
+        LinearLayout folls = rootView.findViewById(R.id.folls);
 
 
         txtreview.setOnClickListener(this);
@@ -79,6 +81,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         txtwatchlist.setOnClickListener(this);
         txtdiary.setOnClickListener(this);
         btnSetting.setOnClickListener(this);
+        folls.setOnClickListener(this);
 
         return rootView;
     }
@@ -104,9 +107,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 } else if (v.getId()== R.id.btnSetting) {
             Intent intent = new Intent(getContext(), Settings.class);
             startActivity(intent);
-
+        } else if (v.getId() == R.id.folls) {
+            Intent intent = new Intent(getContext(), PageFollow.class);
+            startActivity(intent);
         }
     }
-
 }
 

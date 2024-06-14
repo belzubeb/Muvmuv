@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FollowersFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profile1"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/avacopycat"
+                    android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/user1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Copycat"
+                    android:layout_toEndOf="@id/profile1"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/semibold"
+                    android:textColor="@color/Black"/>
+                <TextView
+                    android:id="@+id/email1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/lebahganteng"
+                    android:layout_below="@id/user1"
+                    android:layout_toEndOf="@id/profile1"/>
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="98dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/button_following"
+                    android:text="Following"
+                    android:textSize="11sp"
+                    android:textColor="@color/Tangerine"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5.5dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:paddingTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/profile2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/avacopycat"
+                    android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/user2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Copycat"
+                    android:layout_toEndOf="@id/profile2"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/semibold"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/Black"/>
+                <TextView
+                    android:id="@+id/email2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lebahganteng"
+                    android:layout_below="@id/user2"
+                    android:layout_toEndOf="@id/profile2"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"/>
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="114dp"
+                    android:layout_height="34dp"
+                    android:background="@drawable/button_followback"
+                    android:text="Follow Back"
+                    android:textSize="11sp"
+                    android:textColor="@color/TangerineSec"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="18.5dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

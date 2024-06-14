@@ -194,7 +194,8 @@
                     android:background="@drawable/button_putih"
                     android:text="Reviews"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/Tangerine"/>
+                    android:textColor="@color/Tangerine"
+                    android:onClick="reviews"/>
             </RelativeLayout>
             <TextView
                 android:layout_marginTop="12dp"

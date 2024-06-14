@@ -34,7 +34,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="69dp"
         android:fontFamily="@font/bold"
-        android:textColor="@color/Black"/>
+        android:textColor="@color/Black"
+        android:clickable="true"/>
 
     <TextView
         android:id="@+id/Followers"
@@ -45,7 +46,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="260.5dp"
         android:fontFamily="@font/bold"
-        android:textColor="@color/Black"/>
+        android:textColor="@color/Black"
+        android:clickable="true"/>
+
 
     <FrameLayout
         android:id="@+id/FragmentFolls"

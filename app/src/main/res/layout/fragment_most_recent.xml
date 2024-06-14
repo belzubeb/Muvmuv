@@ -266,7 +266,5 @@
                 android:layout_below="@id/symbolchatmost3"/>
 
         </RelativeLayout>
-
     </ScrollView>
-
 </RelativeLayout>

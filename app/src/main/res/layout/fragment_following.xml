@@ -37,6 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lebahganteng"
+                    android:layout_marginStart="5dp"
                     android:layout_below="@id/user"
                     android:layout_toEndOf="@id/profile"/>
                 <Button
@@ -49,7 +50,6 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="275dp"
                     android:layout_marginTop="5.5dp"/>
-                
 
             </RelativeLayout>
 

@@ -84,6 +84,7 @@ public class CommunityFragment extends Fragment implements View.OnClickListener 
             getParentFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new CommunityFragmentChild())
                     .commit();
+
         }
     }
 }

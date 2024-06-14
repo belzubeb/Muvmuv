@@ -1,14 +1,20 @@
 package com.example.muvmuv2;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,7 +70,15 @@ public class DetailFilmFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_detail_film, container, false);
 
+        Button reviewsButton = view.findViewById(R.id.reviews);
+        reviewsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reviews(v);
+            }
+        });
         backButton = view.findViewById(R.id.back);
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +101,30 @@ public class DetailFilmFragment extends Fragment {
                 transaction.commit();
             }
         });
+        Button buttonAdd = view.findViewById(R.id.buttonadd);
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
+
         return view;
+    }
+
+    private void showDialog() {
+        Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.custom_dialog);
+
+        // Show the dialog
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
+    }
+
+    public void reviews(View view) {
+        Intent intent = new Intent(requireContext(), Reviews.class);
+        startActivity(intent);
     }
 }

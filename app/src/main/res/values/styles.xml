@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Muvmuv2" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.Muvmuv2" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/Tangerine</item>
         <item name="colorPrimaryDark">@color/Azzure</item>
         <item name="colorAccent">@color/Sunflower</item>
