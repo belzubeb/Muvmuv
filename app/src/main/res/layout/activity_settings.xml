@@ -5,6 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Settings">
+    
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/Tangerine">
+        <ImageView
+            android:id="@+id/BackProfile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/backarrow"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="9dp"
+            android:onClick="onBackPress"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:fontFamily="@font/bold"
+            android:layout_toEndOf="@id/BackProfile"
+            android:textColor="@color/Primary"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/LogOut"
@@ -17,13 +42,79 @@
         android:fontFamily="@font/bold"
         android:textColor="@color/Tangerine"/>
     
-    <ImageView
-        android:id="@+id/BackProfile"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/backarrow"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="9dp"
-        android:onClick="onBackPress"/>
+
+    <Button
+        android:id="@+id/username"
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_rectangle_stroke_oren"
+        android:text="Username"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/Tangerine"
+        android:layout_below="@id/header"/>
+
+    <Button
+        android:id="@+id/PrivacyPolicy"
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_rectangle_stroke_oren"
+        android:text="Privacy Policy"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/Tangerine"
+        android:layout_below="@id/username"/>
+    <Button
+        android:id="@+id/TermsAndConditions"
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_rectangle_stroke_oren"
+        android:text="Terms and Conditions"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/Tangerine"
+        android:layout_below="@id/PrivacyPolicy"/>
+    <Button
+        android:id="@+id/ContactUs"
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_rectangle_stroke_oren"
+        android:text="Contact Us"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/Tangerine"
+        android:layout_below="@id/TermsAndConditions"/>
+    <Button
+        android:id="@+id/FAQ"
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_rectangle_stroke_oren"
+        android:text="Frequently Asked Questions"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/Tangerine"
+        android:layout_below="@id/ContactUs"/>
+    <Button
+        android:id="@+id/About"
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_rectangle_stroke_oren"
+        android:text="About the App"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/Tangerine"
+        android:layout_below="@id/FAQ"/>
 
 </RelativeLayout>

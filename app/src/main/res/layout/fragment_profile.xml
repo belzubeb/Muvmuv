@@ -7,9 +7,9 @@
 
     <ImageButton
         android:id="@+id/headerprofile"
-        android:layout_width="wrap_content"
+        android:layout_width="393dp"
         android:layout_height="147dp"
-        android:src="@drawable/headerprofile1"/>
+        android:src="@drawable/thumbsup"/>
 
     <ImageView
         android:id="@+id/fotoprofile"

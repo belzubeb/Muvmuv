@@ -98,7 +98,7 @@
                     android:textColor="@color/TangerineSec"
                     android:layout_marginEnd="20dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="18.5dp"/>
+                    android:layout_marginTop="5.5dp"/>
 
             </RelativeLayout>
 

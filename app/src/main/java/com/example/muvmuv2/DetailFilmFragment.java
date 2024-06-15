@@ -32,6 +32,7 @@ public class DetailFilmFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View backButton;
+    private boolean isAddedToWatchlist;
 
     public DetailFilmFragment() {
         // Required empty public constructor
@@ -115,6 +116,21 @@ public class DetailFilmFragment extends Fragment {
     private void showDialog() {
         Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.custom_dialog);
+
+        Button addWatchlistButton = dialog.findViewById(R.id.addWatchlist);
+        addWatchlistButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ubah drawable button sesuai dengan status isAddedToWatchlist
+                if (isAddedToWatchlist) {
+                    addWatchlistButton.setBackgroundResource(R.drawable.add);
+                } else {
+                    addWatchlistButton.setBackgroundResource(R.drawable.addfill);
+                }
+                // Toggle nilai isAddedToWatchlist
+                isAddedToWatchlist = !isAddedToWatchlist;
+            }
+        });
 
         // Show the dialog
         dialog.show();

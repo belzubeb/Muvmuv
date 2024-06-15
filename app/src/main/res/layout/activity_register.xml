@@ -67,7 +67,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:hintEnabled="false">
 
             <EditText
                 android:id="@+id/valueuser"
@@ -90,7 +91,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:hintEnabled="false">
 
             <EditText
                 android:id="@+id/email"
@@ -114,7 +116,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false">
 
             <EditText
                 android:id="@+id/password"
@@ -139,7 +142,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            app:hintEnabled="false">
 
             <EditText
                 android:id="@+id/Valuepasswordcheck"
