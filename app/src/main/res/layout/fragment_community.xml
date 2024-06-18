@@ -6,49 +6,53 @@
     android:background="@color/Primary"
     tools:context=".CommunityFragment">
 
-    <TextView
-        android:id="@+id/greatingCommunity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="Good Morning, Ucuyy👋"
-        android:textColor="@android:color/black"
-        android:textSize="13sp"
-        />
-
     <ImageView
         android:id="@+id/logoCommunity"
         android:layout_width="137dp"
         android:layout_height="24.81dp"
-        android:layout_below="@id/greatingCommunity"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12.09dp"
         android:src="@drawable/muvmuvlogo" />
 
-    <ImageView
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Hello, ...👋"
+        android:fontFamily="@font/bold"
+        android:layout_below="@+id/logoCommunity"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fotoprofile"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_below="@id/greatingCommunity"
-        android:layout_marginStart="306dp"
-        android:layout_marginTop="1dp"
+        android:layout_below="@id/logoCommunity"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="57dp"
         android:src="@drawable/avatar" />
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_below="@id/greatingCommunity"
-        android:layout_marginStart="342dp"
-        android:layout_marginTop="1dp"
+        android:layout_below="@id/logoCommunity"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="28dp"
         android:src="@drawable/notif" />
 
     <EditText
         android:id="@+id/searchEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logoCommunity"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/username"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rectangle"
         android:hint="Find Film, reviews, lists, user.."
         android:imeOptions="actionSearch"
@@ -65,8 +69,9 @@
         android:layout_below="@id/searchEditText"
         android:layout_marginStart="74dp"
         android:textColor="@color/Black"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="10dp"
         android:textSize="14sp"
+        android:fontFamily="@font/bold"
         android:clickable="true"
         android:contextClickable="true"/>
 
@@ -76,9 +81,11 @@
         android:layout_height="wrap_content"
         android:text="Community"
         android:layout_below="@id/searchEditText"
-        android:layout_marginStart="253dp"
+        android:layout_alignParentEnd="true"
         android:textColor="@color/Black"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bold"
+        android:layout_marginEnd="62dp"
         android:textSize="14sp"
         android:clickable="true"
         android:contextClickable="true"/>

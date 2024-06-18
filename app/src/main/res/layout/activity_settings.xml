@@ -15,7 +15,7 @@
             android:id="@+id/BackProfile"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/backarrow"
+            android:src="@drawable/arrowleft"
             android:layout_marginStart="24dp"
             android:layout_marginTop="9dp"
             android:onClick="onBackPress"/>
@@ -41,21 +41,19 @@
         android:layout_marginBottom="48dp"
         android:fontFamily="@font/bold"
         android:textColor="@color/Tangerine"/>
-    
-
     <Button
-        android:id="@+id/username"
+        android:id="@+id/editProfile"
         android:layout_width="353dp"
         android:layout_height="34dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:background="@drawable/button_rectangle_stroke_oren"
-        android:text="Username"
+        android:text="Edit Profile"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/Tangerine"
-        android:layout_below="@id/header"/>
-
+        android:layout_below="@id/header"
+        android:onClick="editProfile"/>
     <Button
         android:id="@+id/PrivacyPolicy"
         android:layout_width="353dp"
@@ -67,7 +65,7 @@
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/Tangerine"
-        android:layout_below="@id/username"/>
+        android:layout_below="@id/editProfile"/>
     <Button
         android:id="@+id/TermsAndConditions"
         android:layout_width="353dp"

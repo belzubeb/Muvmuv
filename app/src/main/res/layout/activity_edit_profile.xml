@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/Tangerine">
+        <ImageView
+            android:id="@+id/BackProfile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/backarrow"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="9dp"
+            android:onClick="onBackPress"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:fontFamily="@font/bold"
+            android:layout_toEndOf="@id/BackProfile"
+            android:textColor="@color/Primary"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:layout_below="@id/header"
+        android:textColor="@color/Black"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/bold"/>
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit your username"
+        android:layout_below="@id/username"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bio"
+        android:layout_below="@id/editUsername"
+        android:textColor="@color/Black"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/bold" />
+    <EditText
+        android:id="@+id/editBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit your bio"
+        android:layout_below="@id/bio"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"/>
+    
+    <Button
+        android:id="@+id/update"
+        android:layout_width="353dp"
+        android:layout_height="34dp"
+        android:background="@drawable/button_rectangle_stroke_oren"
+        android:layout_below="@id/editBio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textColor="@color/Tangerine"/>
+
+</RelativeLayout>

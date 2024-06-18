@@ -29,4 +29,9 @@ public class Settings extends AppCompatActivity {
     public void onBackPress(View view) {
         finish();
     }
+
+    public void editProfile(View view) {
+        Intent intent = new Intent(getApplicationContext(), EditProfileActivity.class);
+        startActivity(intent);
+    }
 }

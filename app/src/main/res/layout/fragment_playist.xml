@@ -11,7 +11,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:src="@drawable/avatar"
@@ -47,7 +47,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginStart="70dp"
                 android:text="@string/lebahganteng"/>
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:src="@drawable/avatar"
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/playlist2"
                 android:layout_marginTop="10dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="@drawable/avatar"
@@ -176,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/playlist3"
                 android:layout_marginTop="10dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="@drawable/avatar"
@@ -219,7 +219,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/playlist4"
                 android:layout_marginTop="10dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="@drawable/avatar"
@@ -262,7 +262,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/playlist5"
                 android:layout_marginTop="10dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="@drawable/avatar"
@@ -305,7 +305,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/playlist6"
                 android:layout_marginTop="10dp">
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:src="@drawable/avatar"

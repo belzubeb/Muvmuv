@@ -9,15 +9,17 @@
         android:id="@+id/headerprofile"
         android:layout_width="393dp"
         android:layout_height="147dp"
-        android:src="@drawable/thumbsup"/>
+        android:src="@drawable/headerdummy"
+        android:scaleType="centerCrop"/>
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/fotoprofile"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="104dp"
-        android:src="@drawable/fotoprofile"/>
+        android:src="@drawable/fotoprofile"
+        android:clickable="true" />
     <Button
         android:id="@+id/btnSetting"
         android:layout_width="89dp"
@@ -27,12 +29,14 @@
         android:text="Settings"
         android:textSize="10sp"
         android:clickable="true"
+        android:background="@drawable/button_putih"
+        android:textColor="@color/Tangerine"
         android:onClick="onSettings"/>
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="jihyo love akhdan"
+        android:text="your username"
         android:layout_below="@id/fotoprofile"
         android:layout_marginTop="15dp"
         android:layout_marginStart="35dp"
@@ -41,7 +45,7 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lebahganteng"
+        android:text="@string/youremail"
         android:layout_below="@id/username"
         android:layout_marginTop="5dp"
         android:layout_marginStart="35dp"/>
@@ -50,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/email"
-        android:text="Stop calling me out, we're never going to"
+        android:text="Your Bio"
         android:layout_marginTop="10dp"
         android:layout_marginStart="35dp"
         android:textColor="@color/Black"/>
@@ -132,12 +136,11 @@
             android:textSize="14sp"
             android:clickable="true"/>
 
-
     </LinearLayout>
     <FrameLayout
         android:id="@+id/FragmentProfile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/menuprofile"
-        android:layout_marginTop="26dp"/>
+        android:layout_marginTop="15dp"/>
 </RelativeLayout>

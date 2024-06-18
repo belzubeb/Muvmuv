@@ -12,8 +12,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/ava"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoprofile"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="31.5dp"
@@ -97,8 +97,8 @@
                     android:text="1000+likes"
                     android:textColor="@color/Black"/>
             </LinearLayout>
-            <ImageView
-                android:id="@+id/ava2"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoprofile2"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="31.5dp"

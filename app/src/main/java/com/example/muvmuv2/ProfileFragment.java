@@ -2,6 +2,7 @@ package com.example.muvmuv2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
@@ -23,12 +23,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     private DatabaseReference mDatabase;
     private FirebaseUser currentUser;
     private TextView usernameTextView, emailTextView, bioTextView;
     private ImageView headerProfileImageView;
+    private CircleImageView fotoprofile;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -58,6 +61,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         emailTextView = rootView.findViewById(R.id.email);
         bioTextView = rootView.findViewById(R.id.bio);
         headerProfileImageView = rootView.findViewById(R.id.headerprofile);
+        fotoprofile = rootView.findViewById(R.id.fotoprofile);
 
         // Read data from Firebase Database
         mDatabase.addValueEventListener(new ValueEventListener() {
@@ -77,11 +81,13 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
                     // Load image using Glide
                     if (photoProfileUrl != null && !photoProfileUrl.isEmpty()) {
-                        Glide.with(ProfileFragment.this)
+                        Glide.with(requireContext())
                                 .load(photoProfileUrl)
-                                .into(headerProfileImageView);
-                    } else if (photoUrl != null && !photoUrl.isEmpty()) {
-                        Glide.with(ProfileFragment.this)
+                                .into(fotoprofile);
+                    }
+
+                    if (photoUrl != null && !photoUrl.isEmpty()) {
+                        Glide.with(requireContext())
                                 .load(photoUrl)
                                 .into(headerProfileImageView);
                     }
@@ -91,8 +97,13 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // Handle database error
+                Log.e("ProfileFragment", "Database Error: " + databaseError.getMessage());
             }
         });
+
+        getParentFragmentManager().beginTransaction()
+                .replace(R.id.FragmentProfile, new FragmentReview())
+                .commit();
 
         txtreview.setOnClickListener(this);
         txtplaylist.setOnClickListener(this);
@@ -100,16 +111,17 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         txtdiary.setOnClickListener(this);
         btnSetting.setOnClickListener(this);
         folls.setOnClickListener(this);
+        fotoprofile.setOnClickListener(this);
+        headerProfileImageView.setOnClickListener(this);
 
         return rootView;
     }
-
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.txtreview) {
             getParentFragmentManager().beginTransaction()
-                    .replace(R.id.FragmentProfile, new FragmentReview())
-                    .commit();
+                     .replace(R.id.FragmentProfile, new FragmentReview())
+                     .commit();
         } else if (v.getId() == R.id.txtplaylist) {
             getParentFragmentManager().beginTransaction()
                     .replace(R.id.FragmentProfile, new PlayistFragment())
@@ -127,6 +139,12 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             startActivity(intent);
         } else if (v.getId() == R.id.folls) {
             Intent intent = new Intent(getContext(), PageFollow.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.fotoprofile) {
+            Intent intent = new Intent(getContext(), EditPhotoProfileActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.headerprofile) {
+            Intent intent = new Intent(getContext(), EditHeaderProfileActivity.class);
             startActivity(intent);
         }
     }

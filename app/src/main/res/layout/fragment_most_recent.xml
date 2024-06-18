@@ -11,7 +11,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/avamost1"
                 android:layout_width="41dp"
                 android:layout_height="41dp"
@@ -93,7 +93,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_below="@id/symbolchatmost1"/>
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/avamost2"
                 android:layout_width="41dp"
                 android:layout_height="41dp"
@@ -179,7 +179,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_below="@id/symbolchatmost2"/>
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/avamost3"
                 android:layout_width="41dp"
                 android:layout_height="41dp"

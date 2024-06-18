@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:id="@+id/ava"
+                android:id="@+id/photoProfile"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="31.5dp"
@@ -130,7 +130,7 @@
                 android:layout_below="@id/thumbs"/>
 
             <ImageView
-                android:id="@+id/ava2"
+                android:id="@+id/fotoprofile2"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="31.5dp"

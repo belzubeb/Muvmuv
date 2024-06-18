@@ -65,6 +65,7 @@ public class FollowersFragment extends Fragment {
                 } else {
                     button1.setText("Following");
                     button1.setBackgroundResource(R.drawable.button_following);
+                    button1.setTextColor(getResources().getColor(R.color.Tangerine));
                 }
                 isFollowing = !isFollowing;
             }
@@ -83,7 +84,7 @@ public class FollowersFragment extends Fragment {
                 } else {
                     button2.setText("Following");
                     button2.setBackgroundResource(R.drawable.button_following);
-                    button1.setTextColor(getResources().getColor(R.color.Tangerine));
+                    button2.setTextColor(getResources().getColor(R.color.Tangerine));
                 }
                 isFollowing = !isFollowing;
             }

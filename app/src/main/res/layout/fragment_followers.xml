@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile1"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
@@ -44,7 +44,7 @@
                     android:layout_toEndOf="@id/profile1"/>
                 <Button
                     android:id="@+id/button1"
-                    android:layout_width="98dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="34dp"
                     android:background="@drawable/button_following"
                     android:text="Following"
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile2"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
@@ -90,7 +90,7 @@
                     android:layout_marginTop="5dp"/>
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="114dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="34dp"
                     android:background="@drawable/button_followback"
                     android:text="Follow Back"

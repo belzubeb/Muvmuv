@@ -3,9 +3,6 @@ package com.example.muvmuv2;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +15,8 @@ import android.widget.ImageView;
  */
 public class CommunityFragmentChild extends Fragment {
 
+    private View rootView;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,6 +25,7 @@ public class CommunityFragmentChild extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private MainActivity MainActivity;
 
     public CommunityFragmentChild() {
         // Required empty public constructor
@@ -53,8 +53,7 @@ public class CommunityFragmentChild extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -63,22 +62,17 @@ public class CommunityFragmentChild extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_community_child, container, false);
 
-        // Temukan ImageView
         ImageView communityCard1 = view.findViewById(R.id.communitycard1);
 
-        // Set onClickListener pada ImageView
         communityCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ganti fragment ke DetailCommunityFragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, new DetailCommunityFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                if (getActivity() instanceof MainActivity) {
+                    MainActivity mainActivity = (MainActivity) getActivity();
+                    mainActivity.replaceFragment(new DetailCommunityFragment());
+                }
             }
         });
-
         return view;
     }
 }

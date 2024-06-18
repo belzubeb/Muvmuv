@@ -7,8 +7,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
-
-
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
@@ -19,6 +17,7 @@ import com.google.firebase.FirebaseApp;
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     BottomNavigationView bottomNavigation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 
     private void loadFragment(HomeFragment homeFragment) {
@@ -53,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment_container_parent, homeFragment);
         transaction.commit();
+    }
+
+    public void replaceFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container_parent, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    public void addToWatchlist(String filmPosterUrl) {
     }
 }
 

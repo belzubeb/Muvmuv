@@ -38,9 +38,7 @@ public class PageFollow extends AppCompatActivity {
 
     private void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        // Replace the content of the container with the new fragment
         transaction.replace(R.id.FragmentFolls, fragment);
-        // Commit the transaction
         transaction.commit();
     }
 }

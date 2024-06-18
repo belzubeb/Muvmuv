@@ -11,8 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="Hello "
+        android:fontFamily="@font/bold"
         android:layout_below="@+id/logo"
         android:textColor="@android:color/black"
         android:textSize="13sp" />
@@ -22,31 +23,34 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/textView"
         android:layout_below="@id/logo"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:textColor="@color/Black"
+        android:fontFamily="@font/bold"
+        android:textSize="13sp"
         android:text="..." />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="83.41dp"
         android:layout_height="82.93dp"
-        android:layout_marginStart="335.71dp"
-        android:src="@drawable/accent" />
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/accent1" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="137dp"
         android:layout_height="24.81dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12.09dp"
         android:src="@drawable/muvmuvlogo" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/fotoprofile"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@id/logo"
-        android:layout_marginStart="306dp"
-        android:layout_marginTop="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="57dp"
         android:src="@drawable/avatar" />
 
@@ -54,8 +58,9 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@id/logo"
-        android:layout_marginStart="342dp"
-        android:layout_marginTop="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="28dp"
         android:src="@drawable/notif" />
 
     <EditText
@@ -63,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="9dp"
         android:background="@drawable/rectangle"
         android:hint="Find Film, reviews, lists, user.."
         android:imeOptions="actionSearch"
@@ -76,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/searchEditText"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="5dp"
         android:scrollbars="none">
 
         <LinearLayout
@@ -91,7 +96,8 @@
                 android:layout_height="wrap_content"
                 android:text="Upcoming Films"
                 android:layout_marginStart="20dp"
-                android:textColor="@color/Invert"/>
+                android:fontFamily="@font/bold"
+                android:textColor="@color/Black"/>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -111,10 +117,37 @@
                         android:orientation="vertical"
                         android:layout_marginStart="20dp">
                         <ImageView
-                            android:id="@+id/imageView2"
+                            android:id="@+id/RoadHouse"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
-                            android:src="@drawable/fightclubrate"
+                            android:src="@drawable/roadhouse"
+                            android:clickable="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Road House"
+                            android:textSize="10sp"
+                            android:textColor="@color/Black"
+                            android:fontFamily="@font/bold"
+                            android:layout_marginTop="4dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2024 • Action"
+                            android:textSize="10sp"
+                            android:textColor="@color/Black"
+                            android:layout_marginTop="3dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/Wonka"
+                            android:layout_width="98dp"
+                            android:layout_height="147dp"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/wonka"
                             android:clickable="true"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -122,15 +155,14 @@
                             android:text="Wonka"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -138,27 +170,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/godzilla"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"
-                            android:clickable="true"/>
+                            android:src="@drawable/godzilla" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Godzilla x Kong"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -166,26 +196,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView4"
+                            android:id="@+id/Damsel"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/damsel" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Damsel"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2021 • Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -193,53 +222,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/Dune2"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/dune2" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Dune: Part Two"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="3dp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:id="@+id/imageView6"
-                            android:layout_width="98dp"
-                            android:layout_height="147dp"
-                            android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Wonka"
-                            android:textSize="10sp"
-                            android:textColor="@color/Black"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="4dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
-                            android:textSize="10sp"
-                            android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -248,26 +249,25 @@
                         android:orientation="vertical"
                         android:layout_marginEnd="20dp">
                         <ImageView
-                            android:id="@+id/imageView7"
+                            android:id="@+id/Argylle"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/argylle" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Argylle"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Drama"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -280,7 +280,7 @@
                 android:textColor="@color/Black"
                 android:layout_marginStart="20dp"
                 android:text="Maybe you wanna watch"
-                />
+                android:fontFamily="@font/bold"/>
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -297,26 +297,25 @@
                         android:orientation="vertical"
                         android:layout_marginStart="20dp">
                         <ImageView
-                            android:id="@+id/imageView8"
+                            android:id="@+id/Anatomy"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/anatomy" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Anatomy of a Fall"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2023 • Thriller"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -324,26 +323,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView9"
+                            android:id="@+id/BobMarley"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/bob_marley" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Bob Marley"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Drama"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -351,26 +349,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView10"
+                            android:id="@+id/imaginary"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/imaginary" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Imaginary"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Horor"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -378,26 +375,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView11"
+                            android:id="@+id/Kungfu"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/kungfucard" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Kungfu Panda 4"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Action"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -405,26 +401,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView12"
+                            android:id="@+id/Dune"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/dune" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Dune"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2021 • Action"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -432,26 +427,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageView13"
+                            android:id="@+id/ghost"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate" />
+                            android:src="@drawable/ghostbusters" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Ghostbusters"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Comedy"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -464,22 +458,21 @@
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/ordinary_angels"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Ordinary Angels"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Drama"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -491,7 +484,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/Black"
                 android:layout_marginStart="20dp"
-                android:text="Action" />
+                android:text="Action"
+                android:fontFamily="@font/bold"/>
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -508,7 +502,7 @@
                             android:orientation="vertical"
                             android:layout_marginStart="20dp">
                             <ImageView
-                                android:id="@+id/imageAction1"
+                                android:id="@+id/FightClub"
                                 android:layout_width="98dp"
                                 android:layout_height="147dp"
                                 android:layout_marginStart="5dp"
@@ -516,18 +510,17 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Wonka"
+                                android:text="Fight Club"
                                 android:textSize="10sp"
                                 android:textColor="@color/Black"
-                                android:layout_gravity="center"
+                                android:fontFamily="@font/bold"
                                 android:layout_marginTop="4dp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2024•Fiksi"
+                                android:text="1999 • Action"
                                 android:textSize="10sp"
                                 android:textColor="@color/Black"
-                                android:layout_gravity="center"
                                 android:layout_marginTop="3dp"/>
                         </LinearLayout>
                     <LinearLayout
@@ -535,18 +528,18 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageAction2"
+                            android:id="@+id/Aquaman"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/aquaman"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Aquaman"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -554,7 +547,6 @@
                             android:text="2024•Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -562,26 +554,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageAction3"
+                            android:id="@+id/Spiderman"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/spiderman"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Spiderman"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2002 • Action"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -589,27 +580,27 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageAction4"
+                            android:id="@+id/TheMarvels"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/the_marvels"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="The Marvels"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Action"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -620,22 +611,21 @@
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/dune2"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Dune: Part Two"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -647,22 +637,21 @@
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/roadhouse"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Road House"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Action"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -675,22 +664,21 @@
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/kungfucard"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Kungfu Panda 4"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Acton"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -702,7 +690,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/Black"
-                android:text="Sci-fi" />
+                android:fontFamily="@font/bold"
+                android:text="Drama" />
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -719,26 +708,25 @@
                         android:orientation="vertical"
                         android:layout_marginStart="20dp">
                         <ImageView
-                            android:id="@+id/imageScifi1"
+                            android:id="@+id/bob"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/bob_marley"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Bob Marley"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Drama"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -746,26 +734,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageScifi2"
+                            android:id="@+id/MadameWeb"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/madam"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Madam Web"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Drama"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -773,26 +760,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageScifi3"
+                            android:id="@+id/Ordinary"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/ordinary_angels"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Ordinary Angels"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Drama"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -800,26 +786,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageScifi4"
+                            android:id="@+id/poorthings"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/poor_things"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Poor Things"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Comedy"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -827,26 +812,25 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/imageScifi5"
+                            android:id="@+id/Shirley"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/shirley"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Shirley"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Drama"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -858,22 +842,21 @@
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/wonka"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Wonka"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                     <LinearLayout
@@ -882,26 +865,25 @@
                         android:orientation="vertical"
                         android:layout_marginEnd="20dp">
                         <ImageView
-                            android:id="@+id/imageScifi7"
+                            android:id="@+id/Fighter"
                             android:layout_width="98dp"
                             android:layout_height="147dp"
                             android:layout_marginStart="5dp"
-                            android:src="@drawable/fightclubrate"/>
+                            android:src="@drawable/fighter"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Wonka"
+                            android:text="Argylle"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
+                            android:fontFamily="@font/bold"
                             android:layout_marginTop="4dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2024•Fiksi"
+                            android:text="2024 • Fiksi"
                             android:textSize="10sp"
                             android:textColor="@color/Black"
-                            android:layout_gravity="center"
                             android:layout_marginTop="3dp"/>
                     </LinearLayout>
                 </LinearLayout>

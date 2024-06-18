@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
-                    android:id="@+id/pctdetail"
+                    android:id="@+id/pictdetail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/detailfight"/>
@@ -31,117 +31,127 @@
                     android:clickable="true"
                     android:focusable="true"
                     />
-
                 <ImageView
-                    android:layout_width="99dp"
-                    android:layout_height="149dp"
+                    android:id="@+id/poster"
+                    android:layout_width="123dp"
+                    android:layout_height="185dp"
                     android:src="@drawable/posterfightclub"
                     android:layout_marginStart="249dp"
                     android:layout_marginTop="155dp"/>
                 <TextView
-                    android:id="@+id/txtFight"
+                    android:id="@+id/Title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Fight Club"
-                    android:layout_below="@id/pctdetail"
+                    android:layout_below="@id/pictdetail"
                     android:textSize="20sp"
                     android:textColor="@color/Black"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="6dp"
-                    />
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/star"
-                    android:layout_below="@id/pctdetail"
-                    android:layout_marginStart="195dp"
-                    android:layout_marginTop="11dp"
-                    />
-                <TextView
+                    android:fontFamily="@font/bold"
+                    android:layout_marginTop="6dp" />
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8/10"
-                    android:layout_below="@id/pctdetail"
-                    android:textSize="10sp"
-                    android:layout_marginStart="215dp"
-                    android:textColor="@color/Tangerine"
+                    android:layout_marginStart="195dp"
                     android:layout_marginTop="11dp"
-                    tools:ignore="SmallSp" />
-
+                    android:orientation="horizontal"
+                    android:layout_below="@id/pictdetail">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/star"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8/10"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/Tangerine"
+                        android:layout_gravity="center"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
                 <TextView
-                    android:id="@+id/txtThn"
+                    android:id="@+id/year"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1999 • DIRECTED BY"
-                    android:layout_below="@+id/txtFight"
+                    android:layout_below="@+id/Title"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="6dp"
+                    android:fontFamily="@font/medium"
                     android:textColor="@color/Black"
                     android:textSize="11sp"/>
                 <TextView
-                    android:id="@+id/txtDirect"
+                    android:id="@+id/Direct"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="David Fincher"
-                    android:layout_below="@+id/txtThn"
+                    android:layout_below="@+id/year"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="1dp"
-                    android:textSize="20sp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bold"
                     android:textColor="@color/Black"/>
-                <TextView
+                <Button
                     android:id="@+id/btntrailer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TRAILER"
-                    android:background="@drawable/rectanglegenre"
-                    android:layout_below="@id/txtDirect"
+                    android:layout_width="74.19dp"
+                    android:layout_height="22.79dp"
+                    android:background="@drawable/buttontrailer"
+                    android:layout_below="@id/Direct"
                     android:layout_marginStart="20dp"
-                    android:textSize="10sp"
-                    android:textColor="@color/Tangerine"
-                    android:layout_marginTop="6dp"
-                    tools:ignore="SmallSp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/txtDirect"
-                    android:layout_marginStart="33.24dp"
-                    android:layout_marginTop="16dp"
-                    android:src="@drawable/play" />
+                    android:layout_marginTop="6dp" />
 
                 <TextView
+                    android:id="@+id/duration"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2hr 19min"
-                    android:layout_below="@id/txtDirect"
-                    android:layout_marginStart="100dp"
-                    android:textSize="10sp"
+                    android:layout_below="@id/Direct"
+                    android:layout_toEndOf="@id/btntrailer"
+                    android:layout_marginStart="5.81dp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/medium"
                     android:textColor="@color/Black"
-                    android:layout_marginTop="9dp"
-                    tools:ignore="SmallSp" />
-
+                    android:layout_marginTop="9dp"/>
                 <TextView
-                    android:layout_width="354dp"
-                    android:layout_height="60dp"
+                    android:layout_width="353dp"
+                    android:layout_height="wrap_content"
                     android:text="Sulit tidur dan bosan dengan rutinitasnya, seorang pekerja kantoran membentuk sebuah klub pertarungan terlarang bersama rekannya. Namun, segalanya berubah menjadi tak terkendali dan sangat berbahaya."
                     android:layout_below="@id/btntrailer"
-                    android:textSize="12sp"
-                    android:layout_marginTop="30.21dp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/medium"
+                    android:layout_marginTop="18.21dp"
                     android:layout_marginStart="20dp"
                     android:textColor="@color/Black"
                     android:layout_marginEnd="20dp"
-                    android:id="@+id/RingkasDetail"
+                    android:id="@+id/sinopsis"
                     android:justificationMode="inter_word"/>
+                <Button
+                    android:id="@+id/genre"
+                    android:layout_width="57dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/button_genre"
+                    android:text="Drama"
+                    android:textColor="@color/Tangerine"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/medium"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_below="@id/sinopsis"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"/>
                 <TextView
                     android:id="@+id/wheretowatch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/RingkasDetail"
+                    android:layout_below="@id/genre"
                     android:textSize="15sp"
                     android:text="Where to watch?"
                     android:fontFamily="@font/bold"
                     android:textColor="@color/Black"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginStart="20dp"/>
                 <LinearLayout
                     android:id="@+id/watch"
@@ -153,7 +163,7 @@
                     <ImageView
                         android:id="@+id/netflix"
                         android:clickable="true"
-                        android:layout_width="92.51dp"
+                        android:layout_width="85.24dp"
                         android:layout_height="33.9dp"
                         android:layout_marginStart="20dp"
                         android:src="@drawable/netflix" />
@@ -169,27 +179,27 @@
                         android:clickable="true"
                         android:layout_width="92.51dp"
                         android:layout_height="33.9dp"
-                        android:layout_marginStart="5dp"
                         android:src="@drawable/hulu"/>
                 </LinearLayout>
                 <Button
                     android:id="@+id/buttonadd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="353dp"
+                    android:layout_height="34dp"
                     android:layout_below="@id/watch"
                     android:layout_centerHorizontal="true"
-                    android:width="353dp"
                     android:background="@drawable/button_oren"
-                    android:text="+  add this film"
-                    android:layout_marginTop="30.1dp"
+                    android:text="+  Add this film"
+                    android:layout_marginTop="20.1dp"
+                    android:textAllCaps="false"
                     android:textColor="@color/Primary"
                     />
                 <Button
                     android:id="@+id/reviews"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="353dp"
+                    android:layout_height="34dp"
                     android:layout_below="@id/buttonadd"
                     android:layout_centerHorizontal="true"
+                    android:textAllCaps="false"
                     android:width="353dp"
                     android:background="@drawable/button_putih"
                     android:text="Reviews"
@@ -202,6 +212,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Simmilliar with this film"
+                android:fontFamily="@font/bold"
                 android:textColor="@color/Black"
                 android:layout_marginStart="20dp"/>
             <HorizontalScrollView
