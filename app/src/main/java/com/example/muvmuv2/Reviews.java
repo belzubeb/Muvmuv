@@ -97,40 +97,58 @@ public class Reviews extends AppCompatActivity {
 
     // Method untuk menyimpan review ke Firebase
     private void saveReviewToFirebase(String reviewContent, String userId) {
+        // Referensi untuk menyimpan ulasan di node Film
+        DatabaseReference filmReviewsRef = mDatabase.child("Film").child(filmId).child("reviews").push();
+        // Referensi untuk menyimpan ulasan di node users
         DatabaseReference userReviewRef = mDatabase.child("users").child(userId).child("reviews").child(filmId).push();
-        DatabaseReference filmReviewRef = mDatabase.child("Film").child(filmId).child("reviews").child(userReviewRef.getKey());
 
-        // Simpan data review
+        // Buat objek Review
         Review review = new Review(userId, reviewContent);
-        userReviewRef.setValue(review)
+
+        // Simpan data ulasan ke kedua referensi
+        filmReviewsRef.setValue(review)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(Reviews.this, "Review added successfully", Toast.LENGTH_SHORT).show();
+                        // Ketika sukses menyimpan di node Film, lanjutkan ke node users
+                        userReviewRef.setValue(review)
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Toast.makeText(Reviews.this, "Review added successfully", Toast.LENGTH_SHORT).show();
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(Reviews.this, "Failed to add review to user: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Reviews.this, "Failed to add review: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Reviews.this, "Failed to add review to film: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
+
+
+
+
     // Method untuk memuat daftar review dari Firebase
     private void loadReviews() {
         DatabaseReference reviewsRef = mDatabase.child("Film").child(filmId).child("reviews");
-        reviewsRef.addValueEventListener(new ValueEventListener() {
-
+        reviewsRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 reviewList = new ArrayList<>();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    for (DataSnapshot reviewSnapshot : snapshot.getChildren()) {
-                        Review review = reviewSnapshot.getValue(Review.class);
-                        if (review != null) {
-                            reviewList.add(review);
-                        }
+                    Review review = snapshot.getValue(Review.class);
+                    if (review != null) {
+                        reviewList.add(review);
                     }
                 }
                 // Set adapter untuk RecyclerView
@@ -144,6 +162,9 @@ public class Reviews extends AppCompatActivity {
             }
         });
     }
+
+
+
 
     public void onBackPress(View view) {
         finish();
