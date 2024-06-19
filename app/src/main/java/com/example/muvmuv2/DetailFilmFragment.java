@@ -38,13 +38,12 @@ import java.util.HashMap;
 public class DetailFilmFragment extends Fragment {
     private TextView title, director, duration, genre, rate, synopsis, year;
     private ImageView pictDetail, poster;
-    private static final String ARG_PARAM1 = "param1";
-    private String mParam1;
     private View backButton;
     private boolean isAddedToWatchlist = false;
     private FirebaseAuth auth;
     private DatabaseReference databaseReference;
-    private String filmPosterUrl;  // Add this field to store the poster URL
+    private String filmPosterUrl;
+    private String filmTitle;
 
     public DetailFilmFragment() {
         // Required empty public constructor
@@ -59,18 +58,10 @@ public class DetailFilmFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_detail_film, container, false);
 
-        // Initialize the views
+        // Initialize views
         title = view.findViewById(R.id.Title);
         director = view.findViewById(R.id.Direct);
         duration = view.findViewById(R.id.duration);
@@ -81,10 +72,14 @@ public class DetailFilmFragment extends Fragment {
         pictDetail = view.findViewById(R.id.pictdetail);
         poster = view.findViewById(R.id.poster);
 
-        String filmTitle = getArguments().getString("Title");
+        // Get film title from arguments
+        filmTitle = getArguments().getString("Title");
         Log.d("DetailFilmFragment", "Received film title: " + filmTitle);
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Film").child(filmTitle);
+        // Initialize DatabaseReference
+        databaseReference = FirebaseDatabase.getInstance().getReference("Film").child(filmTitle);
+
+        // Load film details
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -97,10 +92,9 @@ public class DetailFilmFragment extends Fragment {
                     String filmSynopsis = dataSnapshot.child("synopsis").getValue(String.class);
                     String filmYear = dataSnapshot.child("year").getValue(String.class);
                     String filmPictDetail = dataSnapshot.child("pictDetail").getValue(String.class);
-                    filmPosterUrl = dataSnapshot.child("poster").getValue(String.class);  // Save the poster URL
-                    String filmTrailerUrl = dataSnapshot.child("urlTrailer").getValue(String.class);
+                    filmPosterUrl = dataSnapshot.child("poster").getValue(String.class);
 
-                    // Set the data to the views
+                    // Set data to views
                     title.setText(filmTitle);
                     director.setText(filmDirector);
                     duration.setText(filmDuration);
@@ -110,14 +104,6 @@ public class DetailFilmFragment extends Fragment {
                     year.setText(filmYear + " • DIRECTED BY");
                     loadImageFromUrl(filmPictDetail, pictDetail);
                     loadImageFromUrl(filmPosterUrl, poster);
-
-                    Button trailerButton = view.findViewById(R.id.btntrailer);
-                    trailerButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            openYoutubeTrailer(filmTrailerUrl);
-                        }
-                    });
                 } else {
                     Log.d("DetailFilmFragment", "No data found at specified path");
                     Toast.makeText(getContext(), "No data found", Toast.LENGTH_SHORT).show();
@@ -135,10 +121,12 @@ public class DetailFilmFragment extends Fragment {
         reviewsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reviews(v);
+                reviews();
             }
         });
 
+
+        // Set onClickListener for back button
         backButton = view.findViewById(R.id.back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,6 +140,7 @@ public class DetailFilmFragment extends Fragment {
             }
         });
 
+        // Set onClickListener for add button
         Button buttonAdd = view.findViewById(R.id.buttonadd);
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,37 +152,42 @@ public class DetailFilmFragment extends Fragment {
         return view;
     }
 
-    private void openYoutubeTrailer(String filmTrailerUrl) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(filmTrailerUrl));
-        startActivity(intent);
-    }
-
-    private void loadImageFromUrl(String imageUrl, ImageView imageView) {
-        Glide.with(this).load(imageUrl).into(imageView);
-    }
-
     private void showDialog() {
         Dialog dialog = new Dialog(getContext());
         dialog.setContentView(R.layout.custom_dialog);
 
+        // Initialize views in the dialog
+        TextView dialogTitle = dialog.findViewById(R.id.Title);
+        TextView dialogYear = dialog.findViewById(R.id.year);
         ToggleButton watchedToggle = dialog.findViewById(R.id.watched);
         ToggleButton watchlistToggle = dialog.findViewById(R.id.addWatchlist);
+        Button doneButton = dialog.findViewById(R.id.buttondone);
         ToggleButton loveButton = dialog.findViewById(R.id.btnLove);
 
-        watchedToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        // Get film details
+        DatabaseReference filmRef = FirebaseDatabase.getInstance().getReference("Film").child(filmTitle);
+        filmRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    watchedToggle.setBackgroundResource(R.drawable.wathced);
-                    if (watchlistToggle.isChecked()) {
-                        watchlistToggle.setChecked(false);
-                        watchlistToggle.setBackgroundResource(R.drawable.add);
-                    }
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    String filmTitle = snapshot.child("Title").getValue(String.class);
+                    String filmYear = snapshot.child("year").getValue(String.class);
+                    dialogTitle.setText(filmTitle);
+                    dialogYear.setText(filmYear);
                 } else {
-                    watchedToggle.setBackgroundResource(R.drawable.nofillwtached);
+                    Log.d("DetailFilmFragment", "No data found at specified path");
+                    Toast.makeText(getContext(), "No data found", Toast.LENGTH_SHORT).show();
                 }
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("DetailFilmFragment", "Database error: " + error.getMessage());
+                Toast.makeText(getContext(), "Failed to load data", Toast.LENGTH_SHORT).show();
+            }
         });
+
+        // Handle watchlist toggle button
         watchlistToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -210,30 +204,27 @@ public class DetailFilmFragment extends Fragment {
                 }
             }
         });
-        Button doneButton = dialog.findViewById(R.id.buttondone);
+
+        // Handle done button
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isAddedToWatchlist && filmPosterUrl != null) {
-                    // Panggil metode sendToWatchlist dengan informasi film yang diperlukan
+                    // Call sendToWatchlist method with necessary film information
                     sendToWatchlist(filmPosterUrl, title.getText().toString(), director.getText().toString(), filmPosterUrl, year.getText().toString());
+
+                    // Tambahkan navigasi kembali ke halaman DetailFilmFragment
+                    FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+                    transaction.replace(R.id.fragment_container, DetailFilmFragment.newInstance(filmTitle));
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                 }
                 dialog.dismiss();
             }
         });
-        loveButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    loveButton.setBackgroundResource(R.drawable.love_fill);
-                } else {
-                    loveButton.setBackgroundResource(R.drawable.love);
-                }
-            }
-        });
 
-        dialog.setCanceledOnTouchOutside(true);
-
+        // Show dialog
         dialog.show();
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -245,6 +236,7 @@ public class DetailFilmFragment extends Fragment {
         String uid = auth.getCurrentUser().getUid();
         final DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(uid).child("poster");
 
+        // Check if the film is already in the watchlist
         userRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -293,8 +285,14 @@ public class DetailFilmFragment extends Fragment {
             }
         });
     }
-    public void reviews(View view) {
-        Intent intent = new Intent(requireContext(), Reviews.class);
+
+    private void loadImageFromUrl(String imageUrl, ImageView imageView) {
+        Glide.with(this).load(imageUrl).into(imageView);
+    }
+
+    public void reviews() {
+        Intent intent = new Intent(getContext(), Reviews.class);
+        intent.putExtra("FilmTitle", filmTitle);
         startActivity(intent);
     }
 }
