@@ -1,23 +1,23 @@
 package com.example.muvmuv2;
 
-public class Review {
+public class ReviewProfile {
     private String userId;
     private String username;
     private String email;
-    private String profilePhoto;
+    private String photoProfile;
     private String content;
     private String filmTitle; // Tambahkan atribut filmTitle untuk menyimpan judul film yang diulas
     private float rate;
 
-    public Review() {
+    public ReviewProfile() {
         // Default constructor required for calls to DataSnapshot.getValue(Review.class)
     }
 
-    public Review(String userId, String username, String email, String profilePhoto, String content, String filmTitle) {
+    public ReviewProfile(String userId, String username, String email, String photoProfile, String content, String filmTitle) {
         this.userId = userId;
         this.username = username;
         this.email = email;
-        this.profilePhoto = profilePhoto;
+        this.photoProfile = photoProfile;
         this.content = content;
         this.filmTitle = filmTitle;
         this.content = content;
@@ -47,12 +47,12 @@ public class Review {
         this.email = email;
     }
 
-    public String getProfilePhoto() {
-        return profilePhoto;
+    public String getPhotoProfile() {
+        return photoProfile;
     }
 
-    public void setProfilePhoto(String profilePhoto) {
-        this.profilePhoto = profilePhoto;
+    public void setPhotoProfile(String photoProfile) {
+        this.photoProfile = photoProfile;
     }
 
     public String getContent() {
@@ -80,3 +80,4 @@ public class Review {
         this.rate = rate;
     }
 }
+
